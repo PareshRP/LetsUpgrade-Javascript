@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day6_question1</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .tablebg {
+        font-family: Cambria, Cochin, serif;
+        margin-top: 5%;
+        height: 10%;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 15px;
+        background-color: teal;
+        padding-bottom: 10%;
+        border-radius: 30px;
+      }
+
+      .tble {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 5%;
+        height: 100%;
+        border-color: thistle;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: whitesmoke;
+      }
+
+      th {
+        background-color: lightslategray;
+      }
+      td,
+      th {
+        height: 100%;
+        width: 0%;
+        text-align: center;
+        padding: 1%;
+      }
+
+      .data {
+        height: 40%;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 10%;
+        margin-bottom: 2%;
+      }
+
+      input {
+        padding: 0.7%;
+        height: 40%px;
+        border-radius: 5px;
+        border-style: hidden;
+        width: 120px;
+        margin-top: 5%;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .btn {
+        height: 30px;
+        width: 150px;
+        font-size: 15px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        padding: 0;
+        text-align: center;
+        border-radius: 30px;
+        border-style: groove;
+        margin-top: 5%;
+      }
+
+      .del_btn {
+        height: 30px;
+        width: 100px;
+        border-radius: 30px;
+      }
+
+      .search {
+        font-family: Cambria, Cochin, serif;
+        margin-top: 0;
+        margin-left: 10%;
+        height: 40%;
+        width: 100%;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tablebg">
+      <div class="data">
+        <form onsubmit="insert(event)">
+          <input required type="text" placeholder="Name" id="name" />
+          <input required type="number" placeholder="Age" id="age" />
+          <input required type="text" placeholder="City" id="city" />
+          <input required type="number" placeholder="Salary" id="salary" />
+          <button class="btn" required type="submit" onclick="insert(event)">
+            Add Employees
+          </button>
+        </form>
+      </div>
+
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Search here!"
+          onkeyup="search()"
+          id="searching"
+        />
+      </div>
+      <table border="1" class="tble" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Salary</th>
+            <th>Operation</th>
+          </tr>
+        </thead>
+        <tbody id="tablerows">
+          <tr>
+            <td>1</td>
+            <td>Paresh</td>
+            <td>21</td>
+            <td>Mumbai</td>
+            <td>20000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="question1.js"></script>
+  </body>
+</html>
